@@ -16,7 +16,7 @@ const Github = () => {
           </GithubCard>
           <GithubCard href="https://github.com/elnathan84" target="_blank" aria-label="GithubEJ">
             <GithubIcon src={Icon2}/>
-            <GithubH2>Elnathan Salavarria </GithubH2>
+            <GithubH2>Elnathan Salavarriaa </GithubH2>
             <GithubP>Back-end Developer</GithubP>
           </GithubCard>
           <GithubCard href="https://github.com/IKYNCHI" target="_blank" aria-label="GithubKynch">
