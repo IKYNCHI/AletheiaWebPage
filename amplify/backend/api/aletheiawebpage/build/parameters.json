@@ -1,7 +1,0 @@
-{
-    "AppSyncApiName": "aletheiawebpage",
-    "DynamoDBBillingMode": "PAY_PER_REQUEST",
-    "DynamoDBEnableServerSideEncryption": false,
-    "S3DeploymentBucket": "amplify-amplifyc3d13488ebbd4-staging-52457-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/8197fa3e6c09a233fc322b8e502da149ae363b42"
-}
