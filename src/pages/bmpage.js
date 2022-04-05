@@ -5,6 +5,11 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listTodos } from '../graphql/queries';
 import { createTodo as createNoteMutation, deleteTodo as deleteNoteMutation } from '../graphql/mutations';
 
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+Auth.configure(awsconfig);
+
 const initialFormState = { name: '', description: '' }
 
 function App() {
