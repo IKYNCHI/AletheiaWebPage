@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom'
 export const InfoContainter = styled.div`
     color:#fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#33415C')};
+    background: ${({lightBg}) => (lightBg ? '#979DAC' : '#33415C')};
 
     @media screen and (max-width: 768px){
         padding: 100px 0;
@@ -71,10 +71,6 @@ export const Subtitle = styled.p`
     line-height: 24px;
     color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
 `
-export const BtnWrap = styled.div`
-    display: flex;
-    justify-content: flex-start;
-`
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
@@ -84,3 +80,16 @@ export const Img = styled.img`
     margin: 0 0 10px 0;
     padding-right: 0;
 `
+export const Icon = styled(Link)`
+    margin-left: 32px;
+    margin-top: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 32px;
+
+    @media screen and (max-width: 480px){
+        margin-left: 16px;
+        margin-top: 8px;
+    }
+` 

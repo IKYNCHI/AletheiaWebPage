@@ -1,8 +1,27 @@
-import React from 'react';
-import {FaFacebook,FaYoutube,FaGithub} from 'react-icons/fa'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink} from './FooterElements';
+import React, {useEffect, useState} from 'react';
+import {FaYoutube,FaGithub} from 'react-icons/fa'
+import {animateScroll as scroll} from 'react-scroll';
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterEmail, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink} from './FooterElements';
 
-const Footer = () => {
+const Footer = ({ toggle }) => {
+    const [scrollNav, setScrollNav] = useState(false)
+    
+    const changeNav = () => {
+        if(window.scrollY >= 10){
+            setScrollNav(true)
+        } else{
+            setScrollNav(false)
+        }
+    };
+  
+    useEffect(() => {
+      window.addEventListener('scroll', changeNav)
+    }, []);
+  
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
   return (
       <FooterContainer>
           <FooterWrap>
@@ -11,19 +30,18 @@ const Footer = () => {
                       <FooterLinkItems>
                         <FooterLinkTitle>About Us</FooterLinkTitle>
                             <FooterLink to="/benchmark"></FooterLink>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                             <FooterLink to="/benchmark"></FooterLink>
+                            <FooterLink to="/abtpage" target="_blank">Thesis</FooterLink>
                             <FooterLink to="/benchmark"></FooterLink>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                       </FooterLinkItems>
-                      <FooterLinkItems>
+                      {/* <FooterLinkItems>
                         <FooterLinkTitle>Lorem</FooterLinkTitle>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
-                      </FooterLinkItems>
+                      </FooterLinkItems> */}
                   </FooterLinksWrapper>
                   <FooterLinksWrapper>
                       <FooterLinkItems>
@@ -35,27 +53,25 @@ const Footer = () => {
                       </FooterLinkItems>
                       <FooterLinkItems>
                         <FooterLinkTitle>Email Us</FooterLinkTitle>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
-                            <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
+                            <FooterEmail to="/benchmark"></FooterEmail>
+                            <FooterEmail to="/benchmark"></FooterEmail>
+                            <FooterEmail href="mailto:aletheiathesis@gmail.com">Aletheia</FooterEmail>
+                            <FooterEmail to="/benchmark"></FooterEmail>
                       </FooterLinkItems>
                   </FooterLinksWrapper>
               </FooterLinksContainer>
               <SocialMedia>
                   <SocialMediaWrap>
-                      <SocialLogo to='/'>
+                      <SocialLogo to='/' onClick={toggleHome}>
                             Aletheia
                       </SocialLogo>
                       <WebsiteRights> Bridging Bois {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                       <SocialIcons>
-                          <SocialIconLink href="https://www.facebook.com/Kynchiee/" target="_blank" aria-label="Facebook">
-                              <FaFacebook/>
-                          </SocialIconLink>
+                          <SocialIconLink></SocialIconLink>
                           <SocialIconLink href="https://www.youtube.com/channel/UCWkt7xqxQUMbrb_Z-rzaAmw" target="_blank" aria-label="Youtube">
                               <FaYoutube/>
                           </SocialIconLink>
-                          <SocialIconLink href="github.com/IKYNCHI" target="_blank" aria-label="Github">
+                          <SocialIconLink href="https://github.com/elnathan84/aletheia" target="_blank" aria-label="Github">
                               <FaGithub/>
                           </SocialIconLink>
                       </SocialIcons>
