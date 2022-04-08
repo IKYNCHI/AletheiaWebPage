@@ -9,7 +9,7 @@ export const Container = styled.div`
     right: 0;
     top: 0;
     z-index: 0;
-    overflow: hidden;
+    overflow: auto;
     background: #0466C8;
 `
 export const FormWrap = styled.div`

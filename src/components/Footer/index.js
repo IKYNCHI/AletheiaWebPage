@@ -29,11 +29,10 @@ const Footer = ({ toggle }) => {
                   <FooterLinksWrapper>
                       <FooterLinkItems>
                         <FooterLinkTitle>About Us</FooterLinkTitle>
-                            <FooterLink to="/benchmark"></FooterLink>
-                            <FooterLink to="/benchmark"></FooterLink>
                             <FooterLink to="/abtpage" target="_blank">Thesis</FooterLink>
                             <FooterLink to="/benchmark"></FooterLink>
                       </FooterLinkItems>
+                       {/* If you want to add more footer links */}
                       {/* <FooterLinkItems>
                         <FooterLinkTitle>Lorem</FooterLinkTitle>
                             <FooterLink to="/benchmark">Lorem Ipsum</FooterLink>
