@@ -59,6 +59,17 @@ export const FooterLink = styled.a`
         transition: 0.3s ease-out;
     }
 `
+export const FooterLinkL = styled(Link)`
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+
+    &:hover {
+        color: #01bf71;
+        transition: 0.3s ease-out;
+    }
+`
 export const FooterEmail = styled.a`
     color: #fff;
     text-decoration: none;
