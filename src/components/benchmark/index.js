@@ -31,7 +31,7 @@ const Progress = () => {
                 </Form>
             </FormContent>
         </FormWrap>
-        <table {...getTableProps()}>
+        <table {...getTableProps()} col-xs-3 table-bordered table-striped table-condensed table-fixed>
           <theader>
             {headerGroups.map((headerGroup) => (
                 <tr {...headerGroup.getHeaderGroupProps}>
