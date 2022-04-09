@@ -30,9 +30,8 @@ const Progress = () => {
                     <FormButton type='submit'>Search</FormButton>
                 </Form>
             </FormContent>
-        </FormWrap>
-        <table {...getTableProps()} col-xs-3 table-bordered table-striped table-condensed table-fixed>
-          <theader>
+            <table {...getTableProps()}>
+          <thead>
             {headerGroups.map((headerGroup) => (
                 <tr {...headerGroup.getHeaderGroupProps}>
                   {headerGroup.headers.map((column) => (
@@ -40,7 +39,7 @@ const Progress = () => {
                     ))}
                 </tr>
               ))}
-          </theader>
+          </thead>
           <tbody {...getTableBodyProps()}>
             {
               rows.map(row => {
@@ -57,6 +56,7 @@ const Progress = () => {
             }
           </tbody>
         </table>
+        </FormWrap>
     </Container>
     </>
   );
