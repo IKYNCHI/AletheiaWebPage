@@ -4,7 +4,7 @@ import { Columns } from './table';
 import MOCK_DATA from './MOCK_DATA.json'
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormButton } from './BenchmarkElements'
 import './table.css'
-
+import {FcSearch} from 'react-icons/fc'
 const Progress = () => {
 
   //Use useMemo() if you want to have the older data in cache
@@ -22,14 +22,15 @@ const Progress = () => {
   return (
     <>
     <Container>
+      <Icon to='/'>Aletheia</Icon>
         <FormWrap>
-            <Icon to='/'>Aletheia</Icon>
             <FormContent>
                 <Form action='#'>
                     <FormInput type='search' required />
-                    <FormButton type='submit'>Search</FormButton>
+                    <FormButton type='submit' aria-label='Search'><FcSearch/></FormButton>
                 </Form>
             </FormContent>
+            <FormContent>
             <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
@@ -56,6 +57,7 @@ const Progress = () => {
             }
           </tbody>
         </table>
+        </FormContent>
         </FormWrap>
     </Container>
     </>
