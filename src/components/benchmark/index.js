@@ -4,7 +4,6 @@ import { Columns } from './table';
 import MOCK_DATA from './MOCK_DATA.json'
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormButton } from './BenchmarkElements'
 import './table.css'
-import {FcSearch} from 'react-icons/fc'
 const Progress = () => {
 
   //Use useMemo() if you want to have the older data in cache
@@ -25,10 +24,32 @@ const Progress = () => {
       <Icon to='/'>Aletheia</Icon>
         <FormWrap>
             <FormContent>
-                <Form action='#'>
-                    <FormInput type='search' required />
-                    <FormButton type='submit' aria-label='Search'><FcSearch/></FormButton>
-                </Form>
+            <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="input-group">
+                  <div class="form-outline flex-fill">
+                    <input type="search" id="form1" class="form-control form-control-lg" />
+                    <label class="form-label" for="form1">Search for free photos and videos</label>
+                    <div class="form-helper pt-2"><span class="font-weight-bold">Suggested:</span> 
+                      <a href="#!" class="text-black-50">spring,</a>  
+                      <a href="#!" class="text-black-50">natural,</a>  
+                      <a href="#!" class="text-black-50">outdoors,</a>  
+                      <a href="#!" class="text-black-50">forest,</a>  
+                      <a href="#!" class="text-black-50">cactus,</a>  
+                      <a href="#!" class="text-black-50">flowers,</a>  
+                      <a href="#!" class="text-black-50">more</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
             </FormContent>
             <FormContent>
             <table {...getTableProps()}>

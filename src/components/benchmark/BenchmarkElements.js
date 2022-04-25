@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
     height: 1080px;
     background: #EDEDED;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 20px;
     
 `
 export const FormWrap = styled.div`
@@ -30,7 +35,7 @@ export const Icon = styled(Link)`
     }
 ` 
 export const FormContent = styled.div`
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,10 +47,10 @@ export const FormContent = styled.div`
 `
 export const Form = styled.form`
     background: #33415C;
+    display: flex;
     height: auto;
     width: 60%;
     z-index: 1;
-    display: grid;
     margin: 0 auto;
     padding: 80px 32px;
     border-radius: 4px;
@@ -64,10 +69,10 @@ export const FormInput = styled.input`
 `
 export const FormButton = styled.button`
     background: #023E7D;
-    padding: 16px 0;
-    border: none;
     border-radius: 4px;
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
+    border: none;
+    margin-left: 1rem;
 `
