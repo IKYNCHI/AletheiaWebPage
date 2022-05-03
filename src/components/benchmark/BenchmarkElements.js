@@ -37,42 +37,42 @@ export const Icon = styled(Link)`
 export const FormContent = styled.div`
     height: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: .625rem;
     border: 10rem;
-    width: auto;
     @media screen and (max-width: 480px){
         padding: 10px;
     }
 `
-export const Form = styled.form`
-    background: #33415C;
+export const SearchInputs = styled.div`
+    margin-top: 105px;
     display: flex;
-    height: auto;
-    width: 60%;
-    z-index: 1;
-    margin: 0 auto;
-    padding: 80px 32px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0, 0.9);
-
-    @media screen and (max-width: 480px){
-        padding: 32px 32px;
-    }
+    justify-content: center;
 `
-export const FormInput = styled.input`
+export const IconSearch = styled.div`
+    height: 3.75rem;
+    width: 3.125rem;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+`
+export const Search = styled.div`
     padding: 16px 16px;
     margin-bottom: 32px;
     border: none;
     border-radius: 4px;
     width: 800px;
 `
-export const FormButton = styled.button`
-    background: #023E7D;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    border: none;
-    margin-left: 1rem;
+
+export const input = styled.input`
+    background-color: #fff;
+    border: 0;
+    border-radius: .125rem;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 1.125rem;
+    padding: 0.9375rem;
+    height: 1.875rem;
+    width: 1.75rem;
 `
